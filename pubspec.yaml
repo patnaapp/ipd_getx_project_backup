@@ -7,15 +7,12 @@ environment:
 
 dependencies: 
   cupertino_icons: ^1.0.2
+  get_cli: ^1.6.0
   get: 4.6.1
-  avatar_glow: 2.0.2
-  font_awesome_flutter: ^9.2.0
-  intl: 0.17.0
   flutter: 
     sdk: flutter
 
 dev_dependencies: 
-  get_cli: ^1.6.0
   flutter_test: 
     sdk: flutter
 
