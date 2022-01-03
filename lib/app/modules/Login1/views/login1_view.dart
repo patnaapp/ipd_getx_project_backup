@@ -99,12 +99,12 @@ class Login1View extends GetView<Login1Controller> {
                           controller.passwordController =
                           value! as TextEditingController;
                         },
-                        validator: (value) {
-                          if (value == null || value.length == 0) {
-                            return 'required';
-                          }
-                          return null;
-                        },
+                        // validator: (value) {
+                        //   if (value == null || value.length == 0) {
+                        //     return 'required';
+                        //   }
+                        //   return null;
+                        // },
                       )),
                   Container(
                     margin: const EdgeInsets.only(top: 20.0,left: 30,right: 30),
@@ -122,7 +122,7 @@ class Login1View extends GetView<Login1Controller> {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15))),
 
-                      onPressed: () {
+                      onPressed: () async{
                         Get.to(
                               () => TreatmentDashboardView(),
                         );
