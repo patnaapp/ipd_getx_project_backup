@@ -12,14 +12,11 @@ import '../controllers/treatment_dashboard_controller.dart';
 class TreatmentDashboardView extends GetView<TreatmentDashboardController> {
   @override
   Widget build(BuildContext context) {
-    //Get.put(TreatmentDashboardController());
-
-    return GetBuilder<TreatmentDashboardController>(
-        builder: (controller) {
-          return Scaffold(
+    Get.put(TreatmentDashboardController());
+    return Scaffold(
             body: SafeArea(
-              child:  IndexedStack(
-                        index: controller.tabIndex,
+              child: Obx (() =>IndexedStack(
+                        index: controller.tabIndex.value,
                         children: [
                           DoctorNoteView(),
                           SurgeryView(),
@@ -27,24 +24,25 @@ class TreatmentDashboardView extends GetView<TreatmentDashboardController> {
                         ],
                       ),
                     ),
+            ),
             bottomNavigationBar: Container(
                 decoration: BoxDecoration(
                   borderRadius:  BorderRadius.circular(30),
                   boxShadow: [
                     BoxShadow(
-                        color: Colors.black38, spreadRadius: 0, blurRadius: 10),
+                        color: Colors.black, spreadRadius: 0, blurRadius: 10),
                   ],
                 ),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(30),
 
-                  child: BottomNavigationBar(
+                  child: Obx(()=>BottomNavigationBar(
                     backgroundColor: Colors.blue,
-                    unselectedItemColor: Colors.white,
+                    unselectedItemColor: Colors.white54,
                     //unselectedItemColor: Colors.grey,
                     selectedItemColor: Colors.white,
                     onTap: controller.changeTabIndex,
-                    currentIndex: controller.tabIndex,
+                    currentIndex: controller.tabIndex.value,
                     showSelectedLabels: true,
                     showUnselectedLabels: true,
                     type: BottomNavigationBarType.fixed,
@@ -75,9 +73,9 @@ class TreatmentDashboardView extends GetView<TreatmentDashboardController> {
                   ),
                 )
             ),
-          );
-        }
+          ),
     );
-  }
+        }
+
 
 }

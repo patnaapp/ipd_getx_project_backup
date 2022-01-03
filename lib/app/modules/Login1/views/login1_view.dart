@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ipd_getx_project_backup/app/modules/ScanQRCode/views/scan_q_r_code_view.dart';
 import 'package:ipd_getx_project_backup/app/modules/treatmentDashboard/views/treatment_dashboard_view.dart';
+import 'package:ipd_getx_project_backup/app/routes/app_pages.dart';
 
 import '../controllers/login1_controller.dart';
 
@@ -124,8 +125,11 @@ class Login1View extends GetView<Login1Controller> {
 
                       onPressed: () async{
                         Get.to(
-                              () => TreatmentDashboardView(),
-                        );
+                              () => ScanQRCodeView(),
+                         );
+                        //Get.toNamed(Routes.TREATMENT_DASHBOARD);
+                        //Try once
+
 
                         //Navigator.push(
                           //context,
