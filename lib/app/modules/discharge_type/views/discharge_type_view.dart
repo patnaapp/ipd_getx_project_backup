@@ -18,22 +18,24 @@ class DischargeTypeView extends GetView<DischargeTypeController> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Container(
-              padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
-              //color: Colors.white,
+              padding: const EdgeInsets.fromLTRB(20.0, 25.0, 20.0, 10.0),
               alignment: Alignment.centerLeft,
               child: Card(
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5.0),
+                  borderRadius: BorderRadius.circular(10.0),
                 ),
-                color: Colors.lightBlueAccent,
-                elevation: 10,
-                child: IconButton(
-                  onPressed: () {
+                color: Colors.white,
+                // elevation: 2.0,
+                child: InkWell(
+                  onTap: () {
                     Get.back();
                   },
-                  icon: Icon(
-                    Icons.home,
-                    color: Colors.black,
+                  child: Padding(
+                    padding: EdgeInsets.all(12.0),
+                    child: Icon(
+                      Icons.arrow_back_rounded,
+                      color: Colors.black,
+                    ),
                   ),
                 ),
               ),

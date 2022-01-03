@@ -7,6 +7,7 @@ import 'package:ipd_getx_project_backup/app/providers/providers/AppConstants.dar
 
 // import 'package:ipd_getx_project_backup/app/modules/advice/controllers/speechToText_controller.dart';
 import '../controllers/advice_controller.dart';
+import 'another_advice_view.dart';
 
 class AdviceView extends GetView<AdviceController> {
   // SpeechtotextController speechToText = Get.put(SpeechtotextController());
@@ -132,7 +133,11 @@ class AdviceView extends GetView<AdviceController> {
                         ),
                         // minimumSize: ,
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.to(
+                              () => AnotherAdviceView(),
+                        );
+                      },
                       child: Text("SEND"),
                     ),
                   ),

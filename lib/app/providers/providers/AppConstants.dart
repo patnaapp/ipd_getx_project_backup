@@ -5,6 +5,7 @@ import 'package:flutter/painting.dart';
  const Color kPrimaryColour = Color(0xffe2eaec);
  const Color kButtonPrimaryColour = Color(0xff2596be);
  const Color kQrBackgroundColour = Color(0xff5b5e5e);
+ const Color kAppBackgroundColour = Color(0xffeaf1f9);
 
 
 

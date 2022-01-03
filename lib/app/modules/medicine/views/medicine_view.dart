@@ -28,7 +28,7 @@ class MedicineView extends GetView<MedicineController> {
                   elevation: 10,
                   child: InkWell(
                     onTap: (){
-                      print("back button is pressed");
+                      Get.back();
                     },
                     child: Padding(
                         padding: EdgeInsets.all(12.0),

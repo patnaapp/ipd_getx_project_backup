@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:ipd_getx_project_backup/app/modules/ScanQRCode/views/scan_q_r_code_view.dart';
+import 'package:ipd_getx_project_backup/app/modules/treatmentDashboard/views/treatment_dashboard_view.dart';
 
 import '../controllers/login1_controller.dart';
 
@@ -56,7 +58,7 @@ class Login1View extends GetView<Login1Controller> {
                          child: TextFormField(
                          controller: controller.phoneController,
                          keyboardType: TextInputType.number,
-                         autofocus: true,
+                         autofocus: false,
                          style: TextStyle(fontFamily: 'Montserrat', fontSize: 20.0),
                          decoration: InputDecoration(
                             fillColor: Color(0xffeaf1f9),
@@ -121,6 +123,10 @@ class Login1View extends GetView<Login1Controller> {
                               borderRadius: BorderRadius.circular(15))),
 
                       onPressed: () {
+                        Get.to(
+                              () => TreatmentDashboardView(),
+                        );
+
                         //Navigator.push(
                           //context,
                           //MaterialPageRoute(

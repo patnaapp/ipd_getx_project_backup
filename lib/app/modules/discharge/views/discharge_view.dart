@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:ipd_getx_project_backup/app/modules/discharge_type/views/discharge_type_view.dart';
 
 import '../controllers/discharge_controller.dart';
 
@@ -106,7 +107,9 @@ class DischargeView extends GetView<DischargeController> {
                             // minimumSize: ,
                           ),
                           onPressed: () {
-                            //#TODO: Validate and redirect to Discharge Type Page on Continue Button Click
+                            Get.to(
+                                  () => DischargeTypeView(),
+                            );
                           },
                           child: Text("CONTINUE"),
                         ),
