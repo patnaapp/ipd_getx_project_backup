@@ -158,10 +158,17 @@ class DoctorNoteView extends GetView<DoctorNoteController> {
                       children: <Widget>[
 
                         Container(
+                            child: GestureDetector(
+                            onTap: () async {
+                            Get.to(
+                                  () => LabtestView(),
+                               );
+                             },
                           child: Card(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(18.0),
                             ),
+
                             color: Colors.white,
                             elevation: 8,
                             child: Padding(
@@ -175,12 +182,6 @@ class DoctorNoteView extends GetView<DoctorNoteController> {
                                     child: Image.asset('Images/labtest.png', height: 36, width: 36,),
                                   ),
                                   Container(
-                                    child: GestureDetector(
-                                      onTap: () async {
-                                        Get.to(
-                                              () => LabtestView(),
-                                        );
-                                      },
                                     //padding: const EdgeInsets.fromLTRB(5, 2, 5, 10),
                                     child: Row(
                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -193,10 +194,11 @@ class DoctorNoteView extends GetView<DoctorNoteController> {
                                       ],
                                     ),
                                     ),
+                              ]
                                   ),
-                                ],),
                             ),
                           ),
+                  ),
                         ),
 
                         Container(

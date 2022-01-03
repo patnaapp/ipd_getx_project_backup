@@ -1,10 +1,17 @@
 import 'package:get/get.dart';
 
-
+import 'package:ipd_getx_project_backup/app/modules/Death_Report/bindings/death_report_binding.dart';
+import 'package:ipd_getx_project_backup/app/modules/Death_Report/views/death_report_view.dart';
 import 'package:ipd_getx_project_backup/app/modules/Discharge_old/bindings/discharge_binding.dart';
 import 'package:ipd_getx_project_backup/app/modules/Discharge_old/views/discharge_view.dart';
 import 'package:ipd_getx_project_backup/app/modules/DoctorNote/bindings/doctor_note_binding.dart';
 import 'package:ipd_getx_project_backup/app/modules/DoctorNote/views/doctor_note_view.dart';
+import 'package:ipd_getx_project_backup/app/modules/Inter_Departmental_Opinion/bindings/inter_departmental_opinion_binding.dart';
+import 'package:ipd_getx_project_backup/app/modules/Inter_Departmental_Opinion/views/inter_departmental_opinion_view.dart';
+import 'package:ipd_getx_project_backup/app/modules/Notofication_of_death/bindings/notofication_of_death_binding.dart';
+import 'package:ipd_getx_project_backup/app/modules/Notofication_of_death/views/notofication_of_death_view.dart';
+import 'package:ipd_getx_project_backup/app/modules/Physical_Examination/bindings/physical_examination_binding.dart';
+import 'package:ipd_getx_project_backup/app/modules/Physical_Examination/views/physical_examination_view.dart';
 import 'package:ipd_getx_project_backup/app/modules/ScanQRCode/bindings/scan_q_r_code_binding.dart';
 import 'package:ipd_getx_project_backup/app/modules/ScanQRCode/views/scan_q_r_code_view.dart';
 import 'package:ipd_getx_project_backup/app/modules/Surgery/bindings/surgery_binding.dart';
@@ -113,6 +120,26 @@ class AppPages {
       name: _Paths.ADVICE1,
       page: () => AnotherAdviceView(),
       binding: AdviceBinding(),
+    ),
+    GetPage(
+      name: _Paths.INTER_DEPARTMENTAL_OPINION,
+      page: () => InterDepartmentalOpinionView(),
+      binding: InterDepartmentalOpinionBinding(),
+    ),
+    GetPage(
+      name: _Paths.DEATH_REPORT,
+      page: () => DeathReportView(),
+      binding: DeathReportBinding(),
+    ),
+    GetPage(
+      name: _Paths.NOTOFICATION_OF_DEATH,
+      page: () => NotoficationOfDeathView(),
+      binding: NotoficationOfDeathBinding(),
+    ),
+    GetPage(
+      name: _Paths.PHYSICAL_EXAMINATION,
+      page: () => PhysicalExaminationView(),
+      binding: PhysicalExaminationBinding(),
     ),
   ];
 }

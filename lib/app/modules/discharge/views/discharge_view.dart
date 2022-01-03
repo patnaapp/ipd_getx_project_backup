@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:ipd_getx_project_backup/app/modules/discharge_type/views/discharge_type_view.dart';
+import 'package:ipd_getx_project_backup/app/modules/treatmentDashboard/views/treatment_dashboard_view.dart';
 
 import '../controllers/discharge_controller.dart';
 
@@ -14,6 +15,7 @@ class DischargeView extends GetView<DischargeController> {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
+          physics: ScrollPhysics(),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -29,7 +31,9 @@ class DischargeView extends GetView<DischargeController> {
                   // elevation: 2.0,
                   child: InkWell(
                     onTap: () {
-                      Get.back();
+                      Get.offAll(
+                            () => TreatmentDashboardView(),
+                      );
                     },
                     child: Padding(
                       padding: EdgeInsets.all(12.0),
@@ -68,6 +72,7 @@ class DischargeView extends GetView<DischargeController> {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       ListView.builder(
+                        physics: ScrollPhysics(),
                         scrollDirection: Axis.vertical,
                         shrinkWrap: true,
                         itemBuilder: (context, index) {

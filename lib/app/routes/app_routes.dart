@@ -15,6 +15,10 @@ abstract class Routes {
   static const TREATMENT = _Paths.TREATMENT;
   static const LOGIN1 = _Paths.LOGIN1;
   static const SCAN_Q_R_CODE = _Paths.SCAN_Q_R_CODE;
+  static const INTER_DEPARTMENTAL_OPINION = _Paths.INTER_DEPARTMENTAL_OPINION;
+  static const DEATH_REPORT = _Paths.DEATH_REPORT;
+  static const NOTOFICATION_OF_DEATH = _Paths.NOTOFICATION_OF_DEATH;
+  static const PHYSICAL_EXAMINATION = _Paths.PHYSICAL_EXAMINATION;
 }
 
 abstract class _Paths {
@@ -34,6 +38,8 @@ abstract class _Paths {
   static const DISCHARGETYPE = '/dischargetype';
   static const VITALS = '/vitals';
   static const ADVICE1 = '/advice1';
-
-
+  static const INTER_DEPARTMENTAL_OPINION = '/inter-departmental-opinion';
+  static const DEATH_REPORT = '/death-report';
+  static const NOTOFICATION_OF_DEATH = '/notofication-of-death';
+  static const PHYSICAL_EXAMINATION = '/physical-examination';
 }
