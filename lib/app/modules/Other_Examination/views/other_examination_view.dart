@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-import '../controllers/death_report_controller.dart';
+import '../controllers/other_examination_controller.dart';
 
-class DeathReportView extends GetView<DeathReportController> {
+class OtherExaminationView extends GetView<OtherExaminationController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('DeathReportView'),
+        //title: Text('OtherExaminationView'),
         centerTitle: true,
       ),
       body: Center(
         child: Text(
-          'DeathReportView is working',
+          'OtherExaminationView is working',
           style: TextStyle(fontSize: 20),
         ),
       ),
