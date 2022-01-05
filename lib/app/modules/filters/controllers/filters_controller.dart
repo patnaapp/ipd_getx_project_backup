@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
-class DeathReportController extends GetxController {
-  //TODO: Implement DeathReportController
+class FiltersController extends GetxController {
+  //TODO: Implement FiltersController
 
   final count = 0.obs;
   @override

@@ -18,6 +18,11 @@ abstract class Routes {
   static const DEATH_REPORT = _Paths.DEATH_REPORT;
   static const PATIENT_DETAILS = _Paths.PATIENT_DETAILS;
   static const INVESTIGATIONS = _Paths.INVESTIGATIONS;
+  static const INTERDEPARMENTALOPINIION = _Paths.INTERDEPARMENTALOPINIION;
+  static const PHYSICALEXAMINATION = _Paths.PHYSICALEXAMINATION;
+  static const GENERALEXAMINATION = _Paths.GENERALEXAMINATION;
+  static const OTHEREXAMINATION = _Paths.OTHEREXAMINATION;
+  static const FILTERS = _Paths.FILTERS;
 }
 
 abstract class _Paths {
@@ -40,4 +45,9 @@ abstract class _Paths {
   static const DEATH_REPORT = '/death-report';
   static const PATIENT_DETAILS = '/patient-details';
   static const INVESTIGATIONS = '/investigations';
+  static const INTERDEPARMENTALOPINIION = '/interdepartmentalopinion';
+  static const PHYSICALEXAMINATION = '/physicalexamination';
+  static const GENERALEXAMINATION = '/generalexamination';
+  static const OTHEREXAMINATION = '/otherexamination';
+  static const FILTERS = '/filters';
 }

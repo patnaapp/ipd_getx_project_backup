@@ -1,5 +1,17 @@
 import 'package:get/get.dart';
 
+import 'package:ipd_getx_project_backup/app/modules/General_Examination/bindings/general_examination_binding.dart';
+import 'package:ipd_getx_project_backup/app/modules/General_Examination/views/general_examination_view.dart';
+import 'package:ipd_getx_project_backup/app/modules/Inter_Departmental_Opinion/bindings/inter_departmental_opinion_binding.dart';
+import 'package:ipd_getx_project_backup/app/modules/Inter_Departmental_Opinion/controllers/inter_departmental_opinion_controller.dart';
+import 'package:ipd_getx_project_backup/app/modules/Inter_Departmental_Opinion/views/inter_departmental_opinion_view.dart';
+import 'package:ipd_getx_project_backup/app/modules/Other_Examination/bindings/other_examination_binding.dart';
+import 'package:ipd_getx_project_backup/app/modules/Other_Examination/views/other_examination_view.dart';
+import 'package:ipd_getx_project_backup/app/modules/Physical_Examination/bindings/physical_examination_binding.dart';
+import 'package:ipd_getx_project_backup/app/modules/Physical_Examination/views/physical_examination_view.dart';
+import 'package:ipd_getx_project_backup/app/modules/filters/bindings/filters_binding.dart';
+import 'package:ipd_getx_project_backup/app/modules/filters/views/filters_view.dart';
+
 import '../modules/Discharge_old/bindings/discharge_binding.dart';
 import '../modules/Discharge_old/views/discharge_view.dart';
 import '../modules/DoctorNote/bindings/doctor_note_binding.dart';
@@ -41,7 +53,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.LOGIN1;
+  static const INITIAL = Routes.PHYSICALEXAMINATION;
 
   static final routes = [
     GetPage(
@@ -133,6 +145,31 @@ class AppPages {
       name: _Paths.INVESTIGATIONS,
       page: () => InvestigationsView(),
       binding: InvestigationsBinding(),
+    ),
+    GetPage(
+      name: _Paths.INTERDEPARMENTALOPINIION,
+      page: () => InterDepartmentalOpinionView(),
+      binding: InterDepartmentalOpinionBinding(),
+    ),
+    GetPage(
+      name: _Paths.PHYSICALEXAMINATION,
+      page: () => PhysicalExaminationView(),
+      binding: PhysicalExaminationBinding(),
+    ),
+    GetPage(
+      name: _Paths.GENERALEXAMINATION,
+      page: () => GeneralExaminationView(),
+      binding: GeneralExaminationBinding(),
+    ),
+    GetPage(
+      name: _Paths.OTHEREXAMINATION,
+      page: () => OtherExaminationView(),
+      binding: OtherExaminationBinding(),
+    ),
+    GetPage(
+      name: _Paths.FILTERS,
+      page: () => FiltersView(),
+      binding: FiltersBinding(),
     ),
   ];
 }
