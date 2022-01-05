@@ -10,7 +10,7 @@ class MedicineController extends GetxController {
   List<Medicine> medicine = <Medicine>[].obs;
   List<Medicine> filteredmedicine = <Medicine>[].obs;
   List<Medicine> selectedmedicine = <Medicine>[].obs;
-  final selected = "some book type".obs;
+  //final selected = "some book type".obs;
   //int dosage = 0;
   //var selectedDrowpdown = 'Morning';
   List dropdownText = ['Morning/Night','Morning','Night'];
@@ -341,7 +341,7 @@ class MedicineController extends GetxController {
         });
   }
 
-  final count = 0.obs;
+  //final count = 0.obs;
   @override
   void onInit() {
     super.onInit();

@@ -6,10 +6,14 @@ import 'package:ipd_getx_project_backup/app/modules/Discharge_old/bindings/disch
 import 'package:ipd_getx_project_backup/app/modules/Discharge_old/views/discharge_view.dart';
 import 'package:ipd_getx_project_backup/app/modules/DoctorNote/bindings/doctor_note_binding.dart';
 import 'package:ipd_getx_project_backup/app/modules/DoctorNote/views/doctor_note_view.dart';
+import 'package:ipd_getx_project_backup/app/modules/General_Examination/bindings/general_examination_binding.dart';
+import 'package:ipd_getx_project_backup/app/modules/General_Examination/views/general_examination_view.dart';
 import 'package:ipd_getx_project_backup/app/modules/Inter_Departmental_Opinion/bindings/inter_departmental_opinion_binding.dart';
 import 'package:ipd_getx_project_backup/app/modules/Inter_Departmental_Opinion/views/inter_departmental_opinion_view.dart';
-import 'package:ipd_getx_project_backup/app/modules/Notofication_of_death/bindings/notofication_of_death_binding.dart';
-import 'package:ipd_getx_project_backup/app/modules/Notofication_of_death/views/notofication_of_death_view.dart';
+import 'package:ipd_getx_project_backup/app/modules/Notification_of_Death/bindings/notification_of_death_binding.dart';
+import 'package:ipd_getx_project_backup/app/modules/Notification_of_Death/views/notification_of_death_view.dart';
+import 'package:ipd_getx_project_backup/app/modules/Other_Examination/bindings/other_examination_binding.dart';
+import 'package:ipd_getx_project_backup/app/modules/Other_Examination/views/other_examination_view.dart';
 import 'package:ipd_getx_project_backup/app/modules/Physical_Examination/bindings/physical_examination_binding.dart';
 import 'package:ipd_getx_project_backup/app/modules/Physical_Examination/views/physical_examination_view.dart';
 import 'package:ipd_getx_project_backup/app/modules/ScanQRCode/bindings/scan_q_r_code_binding.dart';
@@ -43,7 +47,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.LOGIN1;
+  static const INITIAL = Routes.PHYSICAL_EXAMINATION;
 
   static final routes = [
     GetPage(
@@ -132,14 +136,24 @@ class AppPages {
       binding: DeathReportBinding(),
     ),
     GetPage(
-      name: _Paths.NOTOFICATION_OF_DEATH,
-      page: () => NotoficationOfDeathView(),
-      binding: NotoficationOfDeathBinding(),
-    ),
-    GetPage(
       name: _Paths.PHYSICAL_EXAMINATION,
       page: () => PhysicalExaminationView(),
       binding: PhysicalExaminationBinding(),
+    ),
+    GetPage(
+      name: _Paths.GENERAL_EXAMINATION,
+      page: () => GeneralExaminationView(),
+      binding: GeneralExaminationBinding(),
+    ),
+    GetPage(
+      name: _Paths.OTHER_EXAMINATION,
+      page: () => OtherExaminationView(),
+      binding: OtherExaminationBinding(),
+    ),
+    GetPage(
+      name: _Paths.NOTIFICATION_OF_DEATH,
+      page: () => NotificationOfDeathView(),
+      binding: NotificationOfDeathBinding(),
     ),
   ];
 }

@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
-class NotoficationOfDeathController extends GetxController {
-  //TODO: Implement NotoficationOfDeathController
+class OtherExaminationController extends GetxController {
+  //TODO: Implement OtherExaminationController
 
   final count = 0.obs;
   @override

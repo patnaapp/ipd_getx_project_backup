@@ -19,6 +19,9 @@ abstract class Routes {
   static const DEATH_REPORT = _Paths.DEATH_REPORT;
   static const NOTOFICATION_OF_DEATH = _Paths.NOTOFICATION_OF_DEATH;
   static const PHYSICAL_EXAMINATION = _Paths.PHYSICAL_EXAMINATION;
+  static const GENERAL_EXAMINATION = _Paths.GENERAL_EXAMINATION;
+  static const OTHER_EXAMINATION = _Paths.OTHER_EXAMINATION;
+  static const NOTIFICATION_OF_DEATH = _Paths.NOTIFICATION_OF_DEATH;
 }
 
 abstract class _Paths {
@@ -42,4 +45,7 @@ abstract class _Paths {
   static const DEATH_REPORT = '/death-report';
   static const NOTOFICATION_OF_DEATH = '/notofication-of-death';
   static const PHYSICAL_EXAMINATION = '/physical-examination';
+  static const GENERAL_EXAMINATION = '/general-examination';
+  static const OTHER_EXAMINATION = '/other-examination';
+  static const NOTIFICATION_OF_DEATH = '/notification-of-death';
 }

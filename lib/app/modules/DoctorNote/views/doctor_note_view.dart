@@ -202,6 +202,12 @@ class DoctorNoteView extends GetView<DoctorNoteController> {
                         ),
 
                         Container(
+                          child: GestureDetector(
+                            onTap: () async {
+                              Get.to(
+                                    () => RadiologyView(),
+                              );
+                            },
                           child: Card(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(18.0),
@@ -219,14 +225,7 @@ class DoctorNoteView extends GetView<DoctorNoteController> {
                                     child: Image.asset('Images/radiology.png', height: 36, width: 36,),
                                   ),
                                   Container(
-                                    child: GestureDetector(
-                                      onTap: () async {
-                                        Get.to(
-                                              () => RadiologyView(),
-                                        );
-                                      },
-                                    //padding: const EdgeInsets.fromLTRB(5, 2, 5, 10),
-                                    child: Row(
+                                  child: Row(
                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
                                         Text(
@@ -235,15 +234,22 @@ class DoctorNoteView extends GetView<DoctorNoteController> {
                                         ),
                                         Image.asset('Images/circular_arrow.png',height: 24.0, width: 24.0),
                                       ],
-                                    ),
-                                    ),
                                   ),
-                                ],),
+                                  ),
+                                ]
+                              ),
                             ),
+                          ),
                           ),
                         ),
 
                         Container(
+                          child: GestureDetector(
+                              onTap: () async {
+                                Get.to(
+                                      () => MedicineView(),
+                                );
+                              },
                           child: Card(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(18.0),
@@ -262,12 +268,6 @@ class DoctorNoteView extends GetView<DoctorNoteController> {
                                   ),
                                   Container(
                                     //padding: const EdgeInsets.fromLTRB(5, 2, 5, 10),
-                                    child: GestureDetector(
-                                      onTap: () async {
-                                        Get.to(
-                                              () => MedicineView(),
-                                        );
-                                      },
                                     child: Row(
                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
@@ -275,17 +275,24 @@ class DoctorNoteView extends GetView<DoctorNoteController> {
                                           "Medicine",
                                           style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                                         ),
-                                         Image.asset('Images/circular_arrow.png',height: 24.0, width: 24.0),
+                                        Image.asset('Images/circular_arrow.png',height: 24.0, width: 24.0),
                                       ],
                                     ),
-                                    ),
                                   ),
-                                ],),
+                                ]
+                              ),
                             ),
+                          ),
                           ),
                         ),
 
                         Container(
+                          child: GestureDetector(
+                            onTap: () async {
+                              Get.to(
+                                    () => MedicineView(),
+                              );
+                            },
                           child: Card(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(18.0),
@@ -304,10 +311,6 @@ class DoctorNoteView extends GetView<DoctorNoteController> {
                                   ),
                                   Container(
                                     //padding: const EdgeInsets.fromLTRB(5, 2, 5, 10),
-                                    child: GestureDetector(
-                                      onTap: () async {
-                                        print("Go to Referral");
-                                      },
                                     child: Row(
                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
@@ -317,17 +320,21 @@ class DoctorNoteView extends GetView<DoctorNoteController> {
                                         ),
                                         Image.asset('Images/circular_arrow.png',height: 24.0, width: 24.0),
 
-
                                       ],
                                     ),
-                                    ),
                                   ),
-                                ],),
+                                ]
+                              ),
                             ),
+                          ),
                           ),
                         ),
 
                         Container(
+                          child: GestureDetector(
+                            onTap: () async {
+                              print("Go to Procedure");
+                            },
                           child: Card(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(18.0),
@@ -345,10 +352,7 @@ class DoctorNoteView extends GetView<DoctorNoteController> {
                                     child: Image.asset('Images/procedure.png', height: 36, width: 36,),
                                   ),
                                   Container(
-                                    child: GestureDetector(
-                                      onTap: () async {
-                                        print("Go to Procedure");
-                                      },
+
                                     //padding: const EdgeInsets.fromLTRB(5, 2, 5, 10),
                                     child: Row(
                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -358,16 +362,23 @@ class DoctorNoteView extends GetView<DoctorNoteController> {
                                           style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                                         ),
                                         Image.asset('Images/circular_arrow.png',height: 24.0, width: 24.0),
+
                                       ],
                                     ),
-                                    ),
                                   ),
-                                ],),
+                                ]
+                              ),
                             ),
                           ),
+                          ),
                         ),
-
                         Container(
+                          child: GestureDetector(
+                            onTap: () async {
+                              Get.to(
+                                    () => AdviceView(),
+                              );
+                            },
                           child: Card(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(18.0),
@@ -386,12 +397,6 @@ class DoctorNoteView extends GetView<DoctorNoteController> {
                                   ),
                                   Container(
                                     //padding: const EdgeInsets.fromLTRB(5, 2, 5, 10),
-                                    child: GestureDetector(
-                                      onTap: () async {
-                                        Get.to(
-                                              () => AdviceView(),
-                                        );
-                                      },
                                     child: Row(
                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
@@ -403,8 +408,9 @@ class DoctorNoteView extends GetView<DoctorNoteController> {
                                       ],
                                     ),
                                     ),
+                              ],
                                   ),
-                                ],),
+                                ),
                             ),
                           ),
                         ),
