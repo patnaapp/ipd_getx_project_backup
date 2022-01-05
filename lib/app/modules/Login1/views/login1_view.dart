@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:ipd_getx_project_backup/app/modules/ScanQRCode/views/scan_q_r_code_view.dart';
+import 'package:ipd_getx_project_backup/app/modules/home/views/home_view.dart';
 import 'package:ipd_getx_project_backup/app/modules/treatmentDashboard/views/treatment_dashboard_view.dart';
 import 'package:ipd_getx_project_backup/app/routes/app_pages.dart';
 

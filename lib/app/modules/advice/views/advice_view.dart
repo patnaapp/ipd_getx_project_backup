@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:get/get.dart';
+import 'package:ipd_getx_project_backup/app/modules/vitals/views/vitals_view.dart';
 import 'package:ipd_getx_project_backup/app/providers/providers/AppConstants.dart';
 
 // import 'package:ipd_getx_project_backup/app/modules/advice/controllers/speechToText_controller.dart';
@@ -120,25 +121,28 @@ class AdviceView extends GetView<AdviceController> {
                       ],
                     ),
                   ),
+
                   Container(
-                    padding: const EdgeInsets.only(top: 15.0),
-                    child: ElevatedButton(
-                      style: ButtonStyle(
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10.0),
-                            side: BorderSide.none,
-                          ),
-                        ),
-                        // minimumSize: ,
+                    padding: const EdgeInsets.only(top: 20.0),
+                    child: OutlinedButton(
+                      child: Text(
+                        " SEND ",
+                        style: TextStyle(fontSize: 20.0),
                       ),
-                      onPressed: () {
+                      style: OutlinedButton.styleFrom(
+                          backgroundColor: Colors.blue,
+                          primary: Colors.white,
+                          minimumSize: Size(88,50),
+                          // elevation: 4.0,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15))),
+
+                      onPressed: () async{
                         Get.to(
                               () => AnotherAdviceView(),
                         );
                       },
-                      child: Text("SEND"),
+
                     ),
                   ),
                 ],

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:ipd_getx_project_backup/app/modules/advice/controllers/advice_controller.dart';
+import 'package:ipd_getx_project_backup/app/modules/death_report/views/death_report_view.dart';
 import 'package:ipd_getx_project_backup/app/providers/providers/AppConstants.dart';
 
 class AnotherAdviceView extends GetView {
@@ -48,6 +49,9 @@ class AnotherAdviceView extends GetView {
                   "Advice",
                   style: TextStyle(fontSize: 35.0, fontWeight: FontWeight.bold),
                 ),
+              ),
+              SizedBox(
+                height: 10,
               ),
               // Another Advice Input form
               Container(
@@ -299,26 +303,32 @@ class AnotherAdviceView extends GetView {
                       ),
                       //Submit Button
                       Container(
-                        padding: const EdgeInsets.only(top: 10.0),
-                        child: ElevatedButton(
-                          style: ButtonStyle(
-                            shape: MaterialStateProperty.all<
-                                RoundedRectangleBorder>(
-                              RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10.0),
-                                side: BorderSide.none,
-                              ),
-                            ),
-                            // minimumSize: ,
+                        padding: const EdgeInsets.only(top: 20.0),
+                        child: OutlinedButton(
+                          child: Text(
+                            " SUBMIT ",
+                            style: TextStyle(fontSize: 20.0),
                           ),
-                          onPressed: () {},
-                          child: Text("SUBMIT"),
+                          style: OutlinedButton.styleFrom(
+                              backgroundColor: Colors.blue,
+                              primary: Colors.white,
+                              minimumSize: Size(88,50),
+                              // elevation: 4.0,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15))),
+
+                          onPressed: () async{
+                            Get.to(
+                                  () => DeathReportView(),
+                            );
+                          },
+
                         ),
                       ),
                     ],
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),

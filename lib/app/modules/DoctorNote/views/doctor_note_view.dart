@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:ipd_getx_project_backup/app/modules/advice/views/advice_view.dart';
 import 'package:ipd_getx_project_backup/app/modules/labtest/views/labtest_view.dart';
 import 'package:ipd_getx_project_backup/app/modules/medicine/views/medicine_view.dart';
+import 'package:ipd_getx_project_backup/app/modules/patient_details/views/patient_details_view.dart';
 import 'package:ipd_getx_project_backup/app/modules/radiology/views/radiology_view.dart';
 
 import '../controllers/doctor_note_controller.dart';
@@ -128,6 +129,7 @@ class DoctorNoteView extends GetView<DoctorNoteController> {
                                 GestureDetector(
                                   onTap: () async {
                                     print("Go to PatientDetails");
+                                    Get.to(PatientDetailsView());
                                   },
                                  child: Image.asset(
                                   'Images/circular_arrow.png',

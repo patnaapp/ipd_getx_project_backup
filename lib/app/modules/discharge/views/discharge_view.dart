@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:ipd_getx_project_backup/app/modules/discharge_type/views/discharge_type_view.dart';
+import 'package:ipd_getx_project_backup/app/modules/treatmentDashboard/views/treatment_dashboard_view.dart';
 
 import '../controllers/discharge_controller.dart';
 
@@ -29,7 +30,9 @@ class DischargeView extends GetView<DischargeController> {
                   // elevation: 2.0,
                   child: InkWell(
                     onTap: () {
-                      Get.back();
+                      Get.offAll(TreatmentDashboardView());
+                      // Get.back();
+                      // Get.to(TreatmentDashboardView());
                     },
                     child: Padding(
                       padding: EdgeInsets.all(12.0),
@@ -50,71 +53,86 @@ class DischargeView extends GetView<DischargeController> {
                 ),
               ),
               // Form
-              Container(
-                padding: const EdgeInsets.fromLTRB(15, 30, 15, 20),
-                margin: const EdgeInsets.only(left: 20, right: 20),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  border: Border.all(
+              SingleChildScrollView(
+                child: Container(
+                  padding: const EdgeInsets.fromLTRB(15, 30, 15, 20),
+                  margin: const EdgeInsets.only(left: 20, right: 20),
+                  decoration: BoxDecoration(
                     color: Colors.white,
+                    border: Border.all(
+                      color: Colors.white,
+                    ),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(20.0),
+                    ),
                   ),
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(20.0),
-                  ),
-                ),
-                child: Form(
-                  key: _dischargeFormKey,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      ListView.builder(
-                        scrollDirection: Axis.vertical,
-                        shrinkWrap: true,
-                        itemBuilder: (context, index) {
-                          return GestureDetector(
-                            onTap: () {
-                              _dischargeController.changeRadioGroupValue(index);
-                            },
-                            child: Obx(
-                              () => ListTile(
-                                title: Text(
-                                    '${_dischargeController.dischargeList[index]}'),
-                                trailing: Radio<int>(
-                                  value: index,
-                                  activeColor: Colors.blue,
-                                  groupValue: _dischargeController.radiogroupvalue.value,
-                                  onChanged: (val) => _dischargeController.changeRadioGroupValue(val!),),
+                  child: Form(
+                    key: _dischargeFormKey,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        ListView.builder(
+                          physics: ScrollPhysics(),
+                          scrollDirection: Axis.vertical,
+                          shrinkWrap: true,
+                          itemBuilder: (context, index) {
+                            return GestureDetector(
+                              onTap: () {
+                                _dischargeController.changeRadioGroupValue(index);
+                              },
+                              child: Obx(
+                                () => ListTile(
+                                  title: Text(
+                                      '${_dischargeController.dischargeList[index]}'),
+                                  trailing: Radio<int>(
+                                    value: index,
+                                    activeColor: Colors.blue,
+                                    groupValue: _dischargeController.radiogroupvalue.value,
+                                    onChanged: (val) => _dischargeController.changeRadioGroupValue(val!),),
+                                ),
                               ),
-                            ),
-                          );
-                        },
-                        itemCount: _dischargeController.dischargeList.length,
-                      ),
-                      SizedBox(
-                        height: 10.0,
-                      ),
-                      Container(
-                        padding: const EdgeInsets.only(top: 10.0),
-                        child: ElevatedButton(
-                          style: ButtonStyle(
-                            shape: MaterialStateProperty.all<
-                                RoundedRectangleBorder>(
-                              RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10.0),
-                                side: BorderSide.none,
-                              ),
-                            ),
-                            // minimumSize: ,
-                          ),
-                          onPressed: () {
-                            Get.to(
-                                  () => DischargeTypeView(),
                             );
                           },
-                          child: Text("CONTINUE"),
+                          itemCount: _dischargeController.dischargeList.length,
                         ),
-                      ),
-                    ],
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        Container(
+                          // margin: const EdgeInsets.only(top: 20.0,left: 30,right: 30),
+                          width : double.infinity,
+                          child: OutlinedButton(
+                            child: Text(
+                              " CONTINUE ",
+                              style: TextStyle(fontSize: 20.0),
+                            ),
+                            style: OutlinedButton.styleFrom(
+                                backgroundColor: Colors.blue,
+                                primary: Colors.white,
+                                minimumSize: Size(88,50),
+                                elevation: 4.0,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15))),
+
+                            onPressed: () async{
+                              Get.to(
+                                    () => DischargeTypeView(),
+                              );
+                              //Get.toNamed(Routes.TREATMENT_DASHBOARD);
+                              //Try once
+
+
+                              //Navigator.push(
+                              //context,
+                              //MaterialPageRoute(
+                              //builder: (context) => MarkAttenadanceDashboard()),
+                              // );
+                            },
+
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),

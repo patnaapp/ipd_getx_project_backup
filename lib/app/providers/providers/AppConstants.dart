@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 
 //Colour Constants
@@ -6,7 +7,6 @@ import 'package:flutter/painting.dart';
  const Color kButtonPrimaryColour = Color(0xff2596be);
  const Color kQrBackgroundColour = Color(0xff5b5e5e);
  const Color kAppBackgroundColour = Color(0xffeaf1f9);
-
 
 
 
