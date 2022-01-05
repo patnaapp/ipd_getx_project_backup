@@ -1,21 +1,18 @@
 import 'package:get/get.dart';
 
-import 'package:ipd_getx_project_backup/app/modules/General_Examination/bindings/general_examination_binding.dart';
-import 'package:ipd_getx_project_backup/app/modules/General_Examination/views/general_examination_view.dart';
-import 'package:ipd_getx_project_backup/app/modules/Inter_Departmental_Opinion/bindings/inter_departmental_opinion_binding.dart';
-import 'package:ipd_getx_project_backup/app/modules/Inter_Departmental_Opinion/controllers/inter_departmental_opinion_controller.dart';
-import 'package:ipd_getx_project_backup/app/modules/Inter_Departmental_Opinion/views/inter_departmental_opinion_view.dart';
-import 'package:ipd_getx_project_backup/app/modules/Other_Examination/bindings/other_examination_binding.dart';
-import 'package:ipd_getx_project_backup/app/modules/Other_Examination/views/other_examination_view.dart';
-import 'package:ipd_getx_project_backup/app/modules/Physical_Examination/bindings/physical_examination_binding.dart';
-import 'package:ipd_getx_project_backup/app/modules/Physical_Examination/views/physical_examination_view.dart';
-import 'package:ipd_getx_project_backup/app/modules/filters/bindings/filters_binding.dart';
-import 'package:ipd_getx_project_backup/app/modules/filters/views/filters_view.dart';
-
 import '../modules/Discharge_old/bindings/discharge_binding.dart';
 import '../modules/Discharge_old/views/discharge_view.dart';
 import '../modules/DoctorNote/bindings/doctor_note_binding.dart';
 import '../modules/DoctorNote/views/doctor_note_view.dart';
+import '../modules/General_Examination/bindings/general_examination_binding.dart';
+import '../modules/General_Examination/views/general_examination_view.dart';
+import '../modules/Inter_Departmental_Opinion/bindings/inter_departmental_opinion_binding.dart';
+import '../modules/Inter_Departmental_Opinion/controllers/inter_departmental_opinion_controller.dart';
+import '../modules/Inter_Departmental_Opinion/views/inter_departmental_opinion_view.dart';
+import '../modules/Other_Examination/bindings/other_examination_binding.dart';
+import '../modules/Other_Examination/views/other_examination_view.dart';
+import '../modules/Physical_Examination/bindings/physical_examination_binding.dart';
+import '../modules/Physical_Examination/views/physical_examination_view.dart';
 import '../modules/ScanQRCode/bindings/scan_q_r_code_binding.dart';
 import '../modules/ScanQRCode/views/scan_q_r_code_view.dart';
 import '../modules/Surgery/bindings/surgery_binding.dart';
@@ -24,11 +21,15 @@ import '../modules/advice/bindings/advice_binding.dart';
 import '../modules/advice/views/advice_view.dart';
 import '../modules/advice/views/another_advice_view.dart';
 import '../modules/death_report/bindings/death_report_binding.dart';
+import '../modules/death_report/bindings/death_report_binding.dart';
+import '../modules/death_report/views/death_report_view.dart';
 import '../modules/death_report/views/death_report_view.dart';
 import '../modules/discharge/bindings/discharge_binding.dart';
 import '../modules/discharge/views/discharge_view.dart';
 import '../modules/discharge_type/bindings/discharge_type_binding.dart';
 import '../modules/discharge_type/views/discharge_type_view.dart';
+import '../modules/filters/bindings/filters_binding.dart';
+import '../modules/filters/views/filters_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/investigations/bindings/investigations_binding.dart';
@@ -135,6 +136,13 @@ class AppPages {
       name: _Paths.DEATH_REPORT,
       page: () => DeathReportView(),
       binding: DeathReportBinding(),
+      children: [
+        GetPage(
+          name: _Paths.DEATH_REPORT,
+          page: () => DeathReportView(),
+          binding: DeathReportBinding(),
+        ),
+      ],
     ),
     GetPage(
       name: _Paths.PATIENT_DETAILS,
