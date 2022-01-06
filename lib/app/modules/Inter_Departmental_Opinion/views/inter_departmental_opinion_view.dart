@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:ipd_getx_project_backup/app/providers/providers/AppConstants.dart';
 
 import '../controllers/inter_departmental_opinion_controller.dart';
 
@@ -10,36 +11,37 @@ class InterDepartmentalOpinionView
   Widget build(BuildContext context) {
     Get.put(InterDepartmentalOpinionController());
     return Scaffold(
-        backgroundColor: Color(0xffeaf1f9),
+        backgroundColor: kAppBackgroundColour,
         body: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               //Header Container
+          Container(
+          padding: const EdgeInsets.fromLTRB(20, 25, 20, 10),
+          //color: Colors.white,
+          alignment: Alignment.centerLeft,
+          child: Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(5.0),
+            ),
+            color: Colors.white,
+            //elevation: 10,
+            child: InkWell(
+              onTap: (){
+                Get.back();
+              },
+              child: Padding(
+                padding: EdgeInsets.all(12.0),
+                child: Icon(
+                  Icons.arrow_back_rounded,
+                  color: Colors.black,
+                ),),
+            ),
+          ),
+        ),
               Container(
-                padding: const EdgeInsets.fromLTRB(35, 20, 20, 10),
-                //color: Colors.white,
-                alignment: Alignment.centerLeft,
-                child: Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5.0),
-                  ),
-                  color: Colors.white,
-                  elevation: 10,
-                  child: InkWell(
-                    onTap: (){
-                      Get.back();
-                    },
-                    child: Padding(
-                        padding: EdgeInsets.all(12.0),
-                        child: Image.asset(
-                          'Images/arrow.png',
-                        )),
-                  ),
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.fromLTRB(30, 10, 30, 10),
+                padding: const EdgeInsets.fromLTRB(20, 10, 30, 10),
                 width: double.infinity,
                 //color: Colors.white,
                 alignment: Alignment.centerLeft,

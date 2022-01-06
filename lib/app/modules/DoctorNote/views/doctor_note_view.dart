@@ -8,6 +8,7 @@ import 'package:ipd_getx_project_backup/app/modules/labtest/views/labtest_view.d
 import 'package:ipd_getx_project_backup/app/modules/medicine/views/medicine_view.dart';
 import 'package:ipd_getx_project_backup/app/modules/patient_details/views/patient_details_view.dart';
 import 'package:ipd_getx_project_backup/app/modules/radiology/views/radiology_view.dart';
+import 'package:ipd_getx_project_backup/app/providers/providers/AppConstants.dart';
 
 import '../controllers/doctor_note_controller.dart';
 
@@ -15,7 +16,7 @@ class DoctorNoteView extends GetView<DoctorNoteController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffeaf1f9),
+      backgroundColor: kAppBackgroundColour,
       body: SafeArea(
         child: Container(
           margin: EdgeInsets.fromLTRB(20, 12, 20, 8),
@@ -24,7 +25,7 @@ class DoctorNoteView extends GetView<DoctorNoteController> {
               children: <Widget>[
                 //Header Container
                 Container(
-                  padding: const EdgeInsets.fromLTRB(20.0, 25.0, 20.0, 10.0),
+                  padding: const EdgeInsets.fromLTRB(5.0, 13.0, 20.0, 10.0),
                   alignment: Alignment.centerLeft,
                   child: Card(
                     shape: RoundedRectangleBorder(

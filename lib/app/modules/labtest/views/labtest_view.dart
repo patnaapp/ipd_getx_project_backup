@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:ipd_getx_project_backup/app/providers/providers/AppConstants.dart';
 
 import '../controllers/labtest_controller.dart';
 import '../labtest_model.dart';
@@ -10,7 +11,7 @@ class LabtestView extends GetView<LabtestController >  {
   Widget build(BuildContext context) {
     Get.put(LabtestController());
     return Scaffold(
-        backgroundColor: Color(0xffeaf1f9),
+        backgroundColor: kAppBackgroundColour,
         body: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -40,7 +41,7 @@ class LabtestView extends GetView<LabtestController >  {
                 ),
               ),
               Container(
-                padding: const EdgeInsets.fromLTRB(30, 10, 30, 10),
+                padding: const EdgeInsets.fromLTRB(20, 10, 30, 10),
                 //color: Colors.white,
                 alignment: Alignment.centerLeft,
                 child: const Text(

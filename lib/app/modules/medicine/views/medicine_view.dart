@@ -16,30 +16,31 @@ class MedicineView extends GetView<MedicineController> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               //Header Container
+          Container(
+          padding: const EdgeInsets.fromLTRB(20, 25, 20, 10),
+          //color: Colors.white,
+          alignment: Alignment.centerLeft,
+          child: Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(5.0),
+            ),
+            color: Colors.white,
+            //elevation: 10,
+            child: InkWell(
+              onTap: (){
+                Get.back();
+              },
+              child: Padding(
+                padding: EdgeInsets.all(12.0),
+                child: Icon(
+                  Icons.arrow_back_rounded,
+                  color: Colors.black,
+                ),),
+            ),
+          ),
+        ),
               Container(
-                padding: const EdgeInsets.fromLTRB(35, 20, 20, 10),
-                //color: Colors.white,
-                alignment: Alignment.centerLeft,
-                child: Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5.0),
-                  ),
-                  color: Colors.white,
-                  elevation: 10,
-                  child: InkWell(
-                    onTap: (){
-                      Get.back();
-                    },
-                    child: Padding(
-                        padding: EdgeInsets.all(12.0),
-                        child: Image.asset(
-                          'Images/arrow.png',
-                        )),
-                  ),
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.fromLTRB(30, 10, 30, 10),
+                padding: const EdgeInsets.fromLTRB(20, 10, 30, 10),
                 //color: Colors.white,
                 alignment: Alignment.centerLeft,
                 child: const Text(
