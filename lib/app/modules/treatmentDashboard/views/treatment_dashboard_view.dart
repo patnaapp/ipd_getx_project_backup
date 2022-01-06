@@ -26,11 +26,12 @@ class TreatmentDashboardView extends GetView<TreatmentDashboardController> {
                     ),
             ),
             bottomNavigationBar: Container(
+              padding: EdgeInsets.only(bottom: 10),
                 decoration: BoxDecoration(
                   borderRadius:  BorderRadius.circular(30),
                   boxShadow: [
                     BoxShadow(
-                        color: Colors.black, spreadRadius: 0, blurRadius: 10),
+                        color: Colors.white, spreadRadius: 0, blurRadius: 10),
                   ],
                 ),
                 child: ClipRRect(
@@ -46,7 +47,7 @@ class TreatmentDashboardView extends GetView<TreatmentDashboardController> {
                     showSelectedLabels: true,
                     showUnselectedLabels: true,
                     type: BottomNavigationBarType.fixed,
-                    elevation: 10,
+                    elevation: 0,
                     items: [
                       BottomNavigationBarItem(
                         icon: ImageIcon(

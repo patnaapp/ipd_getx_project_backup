@@ -12,18 +12,14 @@ class FiltersController extends GetxController {
   int catIndex = 0;
 
   buildListItem(Category item, BuildContext context, int index) {
-    return Card(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(0), // if you need this
-        side: BorderSide(
-          color: Colors.black.withOpacity(0.2),
-          width: 0,
-        ),
-      ),
-      child: Container(
+    return Container(
         padding: EdgeInsets.fromLTRB(12, 20, 8, 20),
         decoration: BoxDecoration(
-            color: catIndex == index ? Colors.white : Color(0xffeaf1f9)),
+            color: catIndex == index ? Colors.white : Color(0xffeaf1f9),
+          border: Border(
+            //top: BorderSide(width: 16.0, color: Colors.lightBlue.shade600),
+            bottom: BorderSide(width: 1.0, color: Colors.grey),
+          ),),
         child: GestureDetector(
           onTap: () {
             catIndex = index;
@@ -35,8 +31,8 @@ class FiltersController extends GetxController {
                 fontSize: 15,
               )),
         ),
-      ),
-    );
+      );
+
   }
 
   buildSubListItem(SubCat item, BuildContext context, int index) {

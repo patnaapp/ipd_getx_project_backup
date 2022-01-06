@@ -61,8 +61,11 @@ class FiltersView extends GetView<FiltersController> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  SizedBox(
+                  Container(
                     width: 150,
+                    decoration: new BoxDecoration(
+                        color: Color(0xffeaf1f9)
+                    ),
                     child: GetBuilder<FiltersController>(
                       builder: (_) =>
                           ListView.builder(
