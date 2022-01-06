@@ -136,7 +136,7 @@ class PatientDetailsView extends GetView<PatientDetailsController> {
                     ),
                     // Tab Bar View Area
                     Container(
-                      height: 500,
+                      height: MediaQuery.of(context).size.height*0.65,
                       child: Obx( () =>
                           IndexedStack(
                             index: controller.tabIndex.value,
