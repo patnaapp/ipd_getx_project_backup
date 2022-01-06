@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:ipd_getx_project_backup/app/modules/Inter_Departmental_Opinion/views/inter_departmental_opinion_view.dart';
+import 'package:ipd_getx_project_backup/app/modules/Physical_Examination/views/physical_examination_view.dart';
 import 'package:ipd_getx_project_backup/app/modules/advice/views/advice_view.dart';
 import 'package:ipd_getx_project_backup/app/modules/labtest/views/labtest_view.dart';
 import 'package:ipd_getx_project_backup/app/modules/medicine/views/medicine_view.dart';
@@ -292,7 +294,8 @@ class DoctorNoteView extends GetView<DoctorNoteController> {
                           child: GestureDetector(
                             onTap: () async {
                               Get.to(
-                                    () => MedicineView(),
+                                    () => InterDepartmentalOpinionView(),
+                                //#TODO:Referral page to be attached
                               );
                             },
                           child: Card(
@@ -335,7 +338,10 @@ class DoctorNoteView extends GetView<DoctorNoteController> {
                         Container(
                           child: GestureDetector(
                             onTap: () async {
-                              print("Go to Procedure");
+                              Get.to(
+                                    () => PhysicalExaminationView(),
+                                //#TODO:Procedure page to be attached
+                              );
                             },
                           child: Card(
                             shape: RoundedRectangleBorder(

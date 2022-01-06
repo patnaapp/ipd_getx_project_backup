@@ -54,7 +54,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.PHYSICALEXAMINATION;
+  static const INITIAL = Routes.LOGIN1;
 
   static final routes = [
     GetPage(
