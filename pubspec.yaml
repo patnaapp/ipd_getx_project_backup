@@ -10,7 +10,6 @@ dependencies:
   get: 4.6.1
   barcode_scan_fix: ^1.0.2
   fl_chart: 0.40.6
-  speech_to_text: ^5.4.2
   avatar_glow: 2.0.2
   flutter: 
     sdk: flutter

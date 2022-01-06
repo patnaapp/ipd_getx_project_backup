@@ -44,8 +44,8 @@ import '../modules/patient_details/bindings/patient_details_binding.dart';
 import '../modules/patient_details/views/patient_details_view.dart';
 import '../modules/radiology/bindings/radiology_binding.dart';
 import '../modules/radiology/views/radiology_view.dart';
-import '../modules/speech_to_text/bindings/speech_to_text_binding.dart';
-import '../modules/speech_to_text/views/speech_to_text_view.dart';
+// import '../modules/speech_to_text/bindings/speech_to_text_binding.dart';
+// import '../modules/speech_to_text/views/speech_to_text_view.dart';
 import '../modules/treatmentDashboard/bindings/treatment_dashboard_binding.dart';
 import '../modules/treatmentDashboard/views/treatment_dashboard_view.dart';
 import '../modules/vitals/bindings/vitals_binding.dart';
@@ -181,10 +181,10 @@ class AppPages {
       page: () => FiltersView(),
       binding: FiltersBinding(),
     ),
-    GetPage(
-      name: _Paths.SPEECH_TO_TEXT,
-      page: () => SpeechToTextView(),
-      binding: SpeechToTextBinding(),
-    ),
+    // GetPage(
+    //   name: _Paths.SPEECH_TO_TEXT,
+    //   page: () => SpeechToTextView(),
+    //   binding: SpeechToTextBinding(),
+    // ),
   ];
 }
