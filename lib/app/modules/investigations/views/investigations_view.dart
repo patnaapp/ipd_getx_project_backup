@@ -18,9 +18,10 @@ class InvestigationsView extends GetView<InvestigationsController> {
               Container(
                 //#TODO: Change Filter Items Alignment horizontal
                 child: GetBuilder<InvestigationsController>(
-                  builder: (_) => ListView(
-                    scrollDirection: Axis.vertical,
-                    shrinkWrap: true,
+                  builder: (_) => Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    // scrollDirection: Axis.vertical,
+                    // shrinkWrap: true,
                     // padding: const EdgeInsets.all(8),
                     children: [
                       ...controller.investigation_type

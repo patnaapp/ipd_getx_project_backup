@@ -54,22 +54,24 @@ class InvestigationsController extends GetxController {
   }
 
 
-  Widget buildFilterCheckBox(InvestigationType investigationType) => CheckboxListTile(
-        value: investigationType.value,
-        title: Text(
-          investigationType.name,
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
+  Widget buildFilterCheckBox(InvestigationType investigationType) => Expanded(
+    child: CheckboxListTile(
+          value: investigationType.value,
+          title: Text(
+            investigationType.name,
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
           ),
+          onChanged: (value) {
+            investigationType.value = value!;
+            update();
+          },
+          controlAffinity: ListTileControlAffinity.trailing,
+          activeColor: Colors.blue,
         ),
-        onChanged: (value) {
-          investigationType.value = value!;
-          update();
-        },
-        controlAffinity: ListTileControlAffinity.trailing,
-        activeColor: Colors.blue,
-      );
+  );
 
   @override
   void onReady() {

@@ -57,12 +57,10 @@ class PatientDetailsView extends GetView<PatientDetailsController> {
                         child: CircleAvatar(
                           radius: 25,
                           backgroundColor: Colors.white,
-                          child: IconButton(
-                            onPressed: () {
-                              // Get.to(() => Spee:q!
-                              // oTextView());
-                            },
-                            icon: Icon(Icons.person),
+                          child: Image.asset(
+                            'Images/personMale.png',
+                            height: 32.0,
+                            width: 32.0,
                           ),
                         ),
                       ),
