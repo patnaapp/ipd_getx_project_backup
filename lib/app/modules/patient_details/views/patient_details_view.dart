@@ -59,7 +59,8 @@ class PatientDetailsView extends GetView<PatientDetailsController> {
                           backgroundColor: Colors.white,
                           child: IconButton(
                             onPressed: () {
-                              // Get.to(() => SpeechToTextView());
+                              // Get.to(() => Spee:q!
+                              // oTextView());
                             },
                             icon: Icon(Icons.person),
                           ),
