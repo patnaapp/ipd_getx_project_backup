@@ -16,12 +16,12 @@ class InvestigationsView extends GetView<InvestigationsController> {
           child: Column(
             children: [
               Container(
-                // height: 100,
+                //#TODO: Change Filter Items Alignment horizontal
                 child: GetBuilder<InvestigationsController>(
                   builder: (_) => ListView(
                     scrollDirection: Axis.vertical,
                     shrinkWrap: true,
-                    padding: const EdgeInsets.all(8),
+                    // padding: const EdgeInsets.all(8),
                     children: [
                       ...controller.investigation_type
                           .map(controller.buildFilterCheckBox)
@@ -31,8 +31,7 @@ class InvestigationsView extends GetView<InvestigationsController> {
                 ),
               ),
               // Content Container
-              Container(
-                height: 350,
+              Expanded(
                 child: SingleChildScrollView(
                   child: Container(
                     // padding: const EdgeInsets.all(10),

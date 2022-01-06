@@ -1043,7 +1043,7 @@ class DischargeTypeView extends GetView<DischargeTypeController> {
                           child: ExpansionTile(
                             //tilePadding: const EdgeInsets.all(4),
                             title: Text(
-                              'Patient Demographic Details',
+                              'Patient Discharge Information',
                               style: TextStyle(
                                   fontSize: 18, fontWeight: FontWeight.bold),
                             ),
@@ -1341,24 +1341,23 @@ class DischargeTypeView extends GetView<DischargeTypeController> {
               ),
             ),
             Container(
-              //margin: EdgeInsets.all(25),
-              margin: EdgeInsets.fromLTRB(45, 20, 45, 20),
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  shape: new RoundedRectangleBorder(
-                    borderRadius: new BorderRadius.circular(30.0),
-                  ),
-                  padding: EdgeInsets.all(12),
-                  elevation: 6,
-                ),
-                clipBehavior: Clip.none,
+              // padding: const EdgeInsets.only(top: 20.0),
+              margin: const EdgeInsets.fromLTRB(20, 20, 20, 20),
+              child: OutlinedButton(
                 child: Text(
-                  'Next',
-                  style: TextStyle(fontSize: 16.0, color: Colors.white),
+                  " NEXT ",
+                  style: TextStyle(fontSize: 20.0),
                 ),
-                onPressed: () {
-                  // Get.to(DeathReportView());
+                style: OutlinedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    primary: Colors.white,
+                    minimumSize: Size(88,50),
+                    elevation: 4.0,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15))),
+                onPressed: () async{
                 },
+
               ),
             ),
           ],

@@ -79,78 +79,76 @@ class PatientDetailsView extends GetView<PatientDetailsController> {
             // Tab Bar Container
             Container(
               margin: const EdgeInsets.only(left: 10, right: 10),
-              child: SingleChildScrollView(
-                child: DefaultTabController(
-                  length: controller.patientDetailTabs.length,
-                  initialIndex: controller.tabIndex.value,
-                  child: Column(
-                    children: [
-                      // Tab Bar Buttons
-                      Container(
-                        padding: const EdgeInsets.all(10),
-                        // margin: const EdgeInsets.only(left: 10),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.blue,
-                            ),
-                          ],
-                        ),
-                        child: Row(
-                          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Expanded(
-                              flex: 9,
-                              child: Container(
-                                margin: const EdgeInsets.only(left: 10),
-                                child: TabBar(
-                                  indicator: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(15),
-                                    color: Colors.white,
-                                  ),
-
-                                  labelPadding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
-                                  indicatorSize: TabBarIndicatorSize.tab,
-                                  isScrollable: true,
-                                  labelColor: Colors.blue,
-                                  unselectedLabelColor: Colors.white,
-                                  onTap: controller.changeTabIndex,
-
-                                  tabs: controller.patientDetailTabs,
+              child: DefaultTabController(
+                length: controller.patientDetailTabs.length,
+                initialIndex: controller.tabIndex.value,
+                child: Column(
+                  children: [
+                    // Tab Bar Buttons
+                    Container(
+                      padding: const EdgeInsets.all(10),
+                      // margin: const EdgeInsets.only(left: 10),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.blue,
+                          ),
+                        ],
+                      ),
+                      child: Row(
+                        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Expanded(
+                            flex: 9,
+                            child: Container(
+                              margin: const EdgeInsets.only(left: 10),
+                              child: TabBar(
+                                indicator: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  color: Colors.white,
                                 ),
+
+                                labelPadding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
+                                indicatorSize: TabBarIndicatorSize.tab,
+                                isScrollable: true,
+                                labelColor: Colors.blue,
+                                unselectedLabelColor: Colors.white,
+                                onTap: controller.changeTabIndex,
+
+                                tabs: controller.patientDetailTabs,
                               ),
                             ),
-                            Expanded(child: Container(
-                              margin: const EdgeInsets.only(right: 10),
-                              child: IconButton(
-                                onPressed: () async {
-                                  print('Icon Button pressed');
-                                },
-                                icon: Icon(Icons.more_vert_outlined, color: Colors.white,),
-                              ),
-                            ),),
-                          ],
-                        ),
-                      ),
-                      // Tab Bar View Area
-                      Container(
-                        height: 500,
-                        child: Obx( () =>
-                            IndexedStack(
-                              index: controller.tabIndex.value,
-                              children: [
-                                VitalsView(),
-                                InvestigationsView(),
-                                Container(
-                                  child: Center(child: Text('#TODO: Medications View')),
-                                ),
-                              ],
+                          ),
+                          Expanded(child: Container(
+                            margin: const EdgeInsets.only(right: 10),
+                            child: IconButton(
+                              onPressed: () async {
+                                print('Icon Button pressed');
+                              },
+                              icon: Icon(Icons.more_vert_outlined, color: Colors.white,),
                             ),
-                        ),
+                          ),),
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                    // Tab Bar View Area
+                    Container(
+                      height: 500,
+                      child: Obx( () =>
+                          IndexedStack(
+                            index: controller.tabIndex.value,
+                            children: [
+                              VitalsView(),
+                              InvestigationsView(),
+                              Container(
+                                child: Center(child: Text('#TODO: Medications View')),
+                              ),
+                            ],
+                          ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             )
