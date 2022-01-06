@@ -14,46 +14,46 @@ class DischargeView extends GetView<DischargeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              //Header Container for Back Button
-              Container(
-                padding: const EdgeInsets.fromLTRB(20.0, 25.0, 20.0, 10.0),
-                alignment: Alignment.centerLeft,
-                child: Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10.0),
-                  ),
-                  color: Colors.white,
-                  // elevation: 2.0,
-                  child: InkWell(
-                    onTap: () {
-                      Get.offAll(TreatmentDashboardView());
-                      // Get.back();
-                      // Get.to(TreatmentDashboardView());
-                    },
-                    child: Padding(
-                      padding: EdgeInsets.all(12.0),
-                      child: Icon(
-                        Icons.arrow_back_rounded,
-                        color: Colors.black,
-                      ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            //Header Container for Back Button
+            Container(
+              padding: const EdgeInsets.fromLTRB(20.0, 25.0, 20.0, 10.0),
+              alignment: Alignment.centerLeft,
+              child: Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                color: Colors.white,
+                // elevation: 2.0,
+                child: InkWell(
+                  onTap: () {
+                    Get.offAll(TreatmentDashboardView());
+                    // Get.back();
+                    // Get.to(TreatmentDashboardView());
+                  },
+                  child: Padding(
+                    padding: EdgeInsets.all(12.0),
+                    child: Icon(
+                      Icons.arrow_back_rounded,
+                      color: Colors.black,
                     ),
                   ),
                 ),
               ),
-              // Page Title
-              Container(
-                padding: const EdgeInsets.fromLTRB(25.0, 20.0, 20.0, 20.0),
-                child: Text(
-                  "Discharge",
-                  style: TextStyle(fontSize: 35.0, fontWeight: FontWeight.bold),
-                ),
+            ),
+            // Page Title
+            Container(
+              padding: const EdgeInsets.fromLTRB(25.0, 20.0, 20.0, 20.0),
+              child: Text(
+                "Discharge",
+                style: TextStyle(fontSize: 35.0, fontWeight: FontWeight.bold),
               ),
-              // Form
-              SingleChildScrollView(
+            ),
+            // Form
+            Expanded(
+              child: SingleChildScrollView(
                 child: Container(
                   padding: const EdgeInsets.fromLTRB(15, 30, 15, 20),
                   margin: const EdgeInsets.only(left: 20, right: 20),
@@ -81,7 +81,7 @@ class DischargeView extends GetView<DischargeController> {
                                 _dischargeController.changeRadioGroupValue(index);
                               },
                               child: Obx(
-                                () => ListTile(
+                                    () => ListTile(
                                   title: Text(
                                       '${_dischargeController.dischargeList[index]}'),
                                   trailing: Radio<int>(
@@ -136,8 +136,8 @@ class DischargeView extends GetView<DischargeController> {
                   ),
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

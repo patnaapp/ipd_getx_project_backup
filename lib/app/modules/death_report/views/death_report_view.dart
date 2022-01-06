@@ -9,6 +9,7 @@ import '../controllers/death_report_controller.dart';
 class DeathReportView extends GetView<DeathReportController> {
   @override
   Widget build(BuildContext context) {
+    Get.put(DeathReportController());
     return Scaffold(
       backgroundColor: kAppBackgroundColour,
       body: SafeArea(
@@ -68,11 +69,13 @@ class DeathReportView extends GetView<DeathReportController> {
                               borderRadius: BorderRadius.circular(15.0)),
                           child: ExpansionTile(
                             //tilePadding: const EdgeInsets.all(4),
+                            // key: Key(0.toString()),
                             title: Text(
                               'Deceased Information',
                               style: TextStyle(
                                   fontSize: 18, fontWeight: FontWeight.bold),
                             ),
+                            initiallyExpanded: true,
                             textColor: Colors.black,
                             collapsedTextColor: Colors.black,
                             iconColor: Colors.black,
@@ -1161,9 +1164,11 @@ class DeathReportView extends GetView<DeathReportController> {
                           ),
                         ),
                       ),
+
                     ]),
               ),
             ),
+            // Submit Button
             Container(
               // margin: const EdgeInsets.only(top: 20.0,left: 30,right: 30),
               margin: EdgeInsets.fromLTRB(30, 20, 30, 20),
@@ -1189,6 +1194,7 @@ class DeathReportView extends GetView<DeathReportController> {
 
               ),
             ),
+
           ],
         ),
       ),
