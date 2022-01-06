@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:ipd_getx_project_backup/app/modules/investigations/views/investigations_view.dart';
+import 'package:ipd_getx_project_backup/app/modules/speech_to_text/views/speech_to_text_view.dart';
 import 'package:ipd_getx_project_backup/app/modules/vitals/views/vitals_view.dart';
 import 'package:ipd_getx_project_backup/app/providers/providers/AppConstants.dart';
 
@@ -57,7 +58,9 @@ class PatientDetailsView extends GetView<PatientDetailsController> {
                           radius: 25,
                           backgroundColor: Colors.white,
                           child: IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              // Get.to(() => SpeechToTextView());
+                            },
                             icon: Icon(Icons.person),
                           ),
                         ),
