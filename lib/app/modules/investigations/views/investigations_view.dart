@@ -15,27 +15,21 @@ class InvestigationsView extends GetView<InvestigationsController> {
         child: Container(
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  GetBuilder<InvestigationsController>(
-                    builder: (_) => ListView(
-                      scrollDirection: Axis.horizontal,
-                      // shrinkWrap: true,
-                      // padding: const EdgeInsets.all(8),
-                      children: [
-                        ...controller.investigation_type
-                            .map(controller.buildFilterCheckBox)
-                            .toList(),
-                      ],
-                    ),
+              Container(
+                //#TODO: Change Filter Items Alignment horizontal
+                child: GetBuilder<InvestigationsController>(
+                  builder: (_) => ListView(
+                    scrollDirection: Axis.vertical,
+                    shrinkWrap: true,
+                    // padding: const EdgeInsets.all(8),
+                    children: [
+                      ...controller.investigation_type
+                          .map(controller.buildFilterCheckBox)
+                          .toList(),
+                    ],
                   ),
-                ],
+                ),
               ),
-              // Container(
-              //   //#TODO: Change Filter Items Alignment horizontal
-              //   child:
-              // ),
               // Content Container
               Expanded(
                 child: SingleChildScrollView(
