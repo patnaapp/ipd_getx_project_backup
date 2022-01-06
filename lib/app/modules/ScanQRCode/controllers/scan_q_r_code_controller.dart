@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:barcode_scan_fix/barcode_scan.dart';
+import 'package:ipd_getx_project_backup/app/modules/filters/views/filters_view.dart';
 
 class ScanQRCodeController extends GetxController {
   //TODO: Implement ScanQRCodeController
@@ -17,8 +18,8 @@ class ScanQRCodeController extends GetxController {
     showModalBottomSheet(
         isScrollControlled: true,
         context: context,
-        builder: (BuildContext bc) {
-          return Container(
+        builder: (BuildContext context) {
+          return FiltersView();/*Container(
             height: MediaQuery.of(context).copyWith().size.height * 0.50,
             child: Column(
               children: [
@@ -55,7 +56,7 @@ class ScanQRCodeController extends GetxController {
                 ),
               ],
             ),
-          );
+          );*/
         });
   }
 

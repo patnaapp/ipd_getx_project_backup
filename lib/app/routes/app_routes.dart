@@ -23,6 +23,7 @@ abstract class Routes {
   static const GENERALEXAMINATION = _Paths.GENERALEXAMINATION;
   static const OTHEREXAMINATION = _Paths.OTHEREXAMINATION;
   static const FILTERS = _Paths.FILTERS;
+  static const SPEECH_TO_TEXT = _Paths.SPEECH_TO_TEXT;
 }
 
 abstract class _Paths {
@@ -50,4 +51,5 @@ abstract class _Paths {
   static const GENERALEXAMINATION = '/generalexamination';
   static const OTHEREXAMINATION = '/otherexamination';
   static const FILTERS = '/filters';
+  static const SPEECH_TO_TEXT = '/speech-to-text';
 }
