@@ -18,8 +18,13 @@ class ScanQRCodeController extends GetxController {
     showModalBottomSheet(
         isScrollControlled: true,
         context: context,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(top: Radius.circular(30.0)),
+        ),
         builder: (BuildContext context) {
           return FiltersView();/*Container(
+
+
             height: MediaQuery.of(context).copyWith().size.height * 0.50,
             child: Column(
               children: [

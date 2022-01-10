@@ -14,6 +14,7 @@ class FiltersController extends GetxController {
   buildListItem(Category item, BuildContext context, int index) {
     return Container(
         padding: EdgeInsets.fromLTRB(12, 20, 8, 20),
+        //color:  Color(0xffeaf1f9),
         decoration: BoxDecoration(
             color: catIndex == index ? Colors.white : Color(0xffeaf1f9),
           border: Border(

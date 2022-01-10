@@ -33,7 +33,7 @@ class LabtestController extends GetxController {
         content: Text('$count Test Selected'),
         shape: StadiumBorder(),
         behavior: SnackBarBehavior.floating,
-        duration: const Duration(seconds: 2),
+        duration: const Duration(seconds: 1),
         action: SnackBarAction(
             textColor: Colors.white,
             label: 'Done',

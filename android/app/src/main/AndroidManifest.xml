@@ -11,7 +11,7 @@
 <!--        </intent>-->
 <!--    </queries>-->
    <application
-        android:label="ipd_getx_project_backup"
+        android:label="e-Hospital"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

@@ -16,6 +16,7 @@ dependencies:
 
 dev_dependencies: 
   get_cli: ^1.6.0
+  flutter_launcher_icons: any
   flutter_test: 
     sdk: flutter
 
@@ -23,4 +24,9 @@ flutter:
   assets: 
     - Images/
   uses-material-design: true
+
+flutter_icons:
+  image_path: "Images/ehospital_new.png"
+  android: true
+  ios: true
 

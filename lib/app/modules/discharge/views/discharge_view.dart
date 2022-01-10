@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ipd_getx_project_backup/app/modules/discharge_type/views/discharge_type_view.dart';
 import 'package:ipd_getx_project_backup/app/modules/treatmentDashboard/views/treatment_dashboard_view.dart';
+import 'package:ipd_getx_project_backup/app/providers/providers/AppConstants.dart';
 
 import '../controllers/discharge_controller.dart';
 
@@ -13,6 +14,7 @@ class DischargeView extends GetView<DischargeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kAppBackgroundColour,
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
