@@ -1,12 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:ipd_getx_project_backup/app/modules/login1/captcha_model.dart';
+import 'package:ipd_getx_project_backup/app/modules/login1/providers/captcha_provider.dart';
 
 class Login1Controller extends GetxController {
   //TODO: Implement Login1Controller
-  late TextEditingController phoneController, passwordController;
+  late TextEditingController phoneController, passwordController, captchaController;
   //TextEditingController passwordController= TextEditingController();
   //final _formKey = GlobalKey<FormState>();
   final GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
+  Rx<Captcha_model> captcha = new Captcha_model(captchaImage: "", captchaId: "", id: 0).obs;
 
   bool validateMobile(String value) {
     bool check=true;
@@ -31,14 +34,33 @@ class Login1Controller extends GetxController {
     loginFormKey.currentState!.save();
   }
 
+  void fetchCaptcha() async {
+    var captchaRes = await CaptchaProvider().getCaptcha(captcha.value.captchaId, captcha.value.id == 0 ? "" : captcha.value.id.toString());
+    if(captchaRes != null){
+      //print(captchaRes.captchaId);
+      this.captcha.value = captchaRes;
+
+      //print(this.captcha.captchaImage);
+      //update();
+    }
+  }
+
+
+
 
 
   //final count = 0.obs;
+
+
+
+
   @override
   void onInit() {
+    fetchCaptcha();
     super.onInit();
     phoneController = TextEditingController();
     passwordController = TextEditingController();
+    captchaController = TextEditingController();
   }
 
   @override

@@ -73,7 +73,6 @@ class FiltersController extends GetxController {
     filterList.add(Category(
         name: "Department No",
         subCat: [SubCat(name: "Dept1"), SubCat(name: "Dept2")]));
-
     subCatList = filterList[0].subCat;
     print(subCatList.length);
   }
