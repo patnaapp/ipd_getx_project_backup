@@ -37,7 +37,7 @@ class Login1Controller extends GetxController {
   void fetchCaptcha() async {
     var captchaRes = await CaptchaProvider().getCaptcha(captcha.value.captchaId, captcha.value.id == 0 ? "" : captcha.value.id.toString());
     if(captchaRes != null){
-      //print(captchaRes.captchaId);
+      print(captchaRes.captchaId);
       this.captcha.value = captchaRes;
 
       //print(this.captcha.captchaImage);
@@ -61,6 +61,9 @@ class Login1Controller extends GetxController {
     phoneController = TextEditingController();
     passwordController = TextEditingController();
     captchaController = TextEditingController();
+
+    phoneController.text = "vaibhav_13643";
+    passwordController.text = "Pass@1234";
   }
 
   @override

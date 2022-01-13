@@ -23,7 +23,7 @@ class CaptchaProvider extends GetConnect {
 
 
     if (response.statusCode == 200) {
-      //print(response.body);
+      print(response.body);
       var jsonString = response.body;
       return Captcha_model.fromJson(json.decode(jsonString));
     }
@@ -60,20 +60,24 @@ class CaptchaProvider extends GetConnect {
   }
 
   Future<UserDetail?> PostAuthenticateWithBody(Map body) async {
+    print(body.toString());
     final response = await client.post(Uri.parse(
         'https://nextgen.ehospital.nic.in/api/authentication/v1/login'),
-        headers: {"Accept": "application/json","Content-Type" : "application/json"},
-        body: body);
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type' : 'application/json'
+        },
+        body: jsonEncode(body));
     if (response.statusCode == 200) {
-      var resp = DefaultResponse.fromJson(json.decode(response.body));
-      if (resp.code == "200!!"){
-        UserDetail info = resp.response as UserDetail;
-        return info;//Ho gya
+      print(response.body);
+      var respJson = json.decode(response.body);
+      if (respJson["metadata"]["code"] == "200!!"){
+        UserDetail info = UserDetail.fromJson(respJson["result"]);
+        return info;
       }else{
-
-        print(resp.message);//show this on toast
+        return null;
+        //print(resp.message);//show this on toast
       }
-      //return Captcha_model.fromJson();
     }
     else {
       print("error in API");

@@ -19,7 +19,7 @@ class ScanQRCodeView extends GetView<ScanQRCodeController> {
               Column(
                 children: <Widget>[
                   Container(
-                    height: MediaQuery.of(context).size.height * .67,
+                    //height: MediaQuery.of(context).size.height * .67,
                     color: Color(0xff616161),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,

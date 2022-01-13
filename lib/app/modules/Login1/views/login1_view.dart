@@ -4,9 +4,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:ipd_getx_project_backup/app/modules/Login1/captcha_model.dart';
 import 'package:ipd_getx_project_backup/app/modules/ScanQRCode/views/scan_q_r_code_view.dart';
 import 'package:ipd_getx_project_backup/app/modules/home/views/home_view.dart';
-import 'package:ipd_getx_project_backup/app/modules/login1/captcha_model.dart';
 import 'package:ipd_getx_project_backup/app/modules/login1/providers/captcha_provider.dart';
 import 'package:ipd_getx_project_backup/app/modules/treatmentDashboard/views/treatment_dashboard_view.dart';
 import 'package:ipd_getx_project_backup/app/routes/app_pages.dart';
@@ -191,19 +191,19 @@ class Login1View extends GetView<Login1Controller> {
                       onPressed: () async {
                         Map body = {
                           "captcha_id": controller.captcha.value.captchaId,
-                          "captcha_value": controller.captchaController.value, //how to take value from text
-                          "id": controller.captcha.value.id, //bolo wait
-                          "password": controller.passwordController.value,
-                          "user_id": controller.phoneController.value
+                          "captcha_value": controller.captchaController.text.toString().trim(),
+                          "id": controller.captcha.value.id,
+                          "password": controller.passwordController.text.toString().trim(),
+                          "user_id": controller.phoneController.text.toString().trim()
                         };
-                        UserDetail? user = await CaptchaProvider().PostAuthenticateWithBody(body);
+                        var user = await CaptchaProvider().PostAuthenticateWithBody(body);
                         if(user != null){
                           print(user.fName);
+                          Get.to(
+                                () => ScanQRCodeView(),
+                          );
                         }
-                        Get.to(
-                          () => ScanQRCodeView(),
 
-                        );
                         //Get.toNamed(Routes.TREATMENT_DASHBOARD);
                         //Try once
 
